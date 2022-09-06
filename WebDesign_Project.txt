@@ -1,0 +1,17 @@
+Project Name: Build a “My Better Self” website 
+
+Basic functions of the website:
+1. user registeration and log in. 
+2.  user makes daily, weekly and monthly plan. 
+3. User moves their plan among three states: “to do”, “in progress” or “Done”. 
+4. Every plan list has fields: things, due date, due time, priority (none, low, medium, high)
+5.Plan list ordered by date or priority
+
+Advanced functions of the website:
+1. Add friends. 
+2. Thumbs up and comments from friends. 
+3. Remind function
+ 
+Platforms and softwares we might use:
+Github for sharing info and codes. 
+HTML, CSS, Bootstrap, javascript, SQL, MongoDB, ReactJS. 
