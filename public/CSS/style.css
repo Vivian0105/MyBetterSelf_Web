@@ -1,0 +1,108 @@
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+p{
+    text-align: left;
+ }
+
+button {
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #7FBCD2;
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 6px;
+    border-width: 0;
+  }
+
+.top-container{
+    background-image: url("../Imgs/climbing_rainbowcolor.jpg");
+    padding: 20px 5px;
+    color: white;
+    text-align: right !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+    
+}
+
+.logo-container{
+    color: orange;
+}
+
+.daily{
+    background-color: #E38B29;
+    color: #7FBCD2;
+    height: 18rem;
+    border-radius: 25px;
+    padding:2px;
+    position: relative;
+}
+
+.annual{
+    background-color: #E38B29;
+    color: #7FBCD2;
+    height: 15rem;
+    border-radius: 25px;
+    padding:2px;
+    position: relative;
+}
+
+.weekly{
+    color: #E38B29;
+    background-color: #7FBCD2;
+    height: 18rem;
+    border-radius: 25px;
+    padding:2px;
+}
+
+.monthly{
+    color: #E38B29;
+    background-color: #7FBCD2;
+    height: 15rem;
+    border-radius: 25px;
+}
+
+.box {
+    max-width: 400px;
+    margin: 5px auto;
+    color: whitesmoke;
+  }
+
+.plan{
+    text-align: left;
+    color: white;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    text-align: center;
+    height: 30px;
+    top: 10px;
+    background: transparent;
+    font-weight: 200;
+    border-color:wheat;
+    border-radius: 5px;
+    width: 200px;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+  }
+
+.fixbutton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+}
