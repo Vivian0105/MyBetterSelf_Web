@@ -101,6 +101,12 @@ input[type="text"] {
     color: white;
 }
 
+select{
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
 ::placeholder {
     color: white;
     opacity: 1;
@@ -111,4 +117,32 @@ input[type="text"] {
     bottom: 10px;
     right: 10px;
     padding: 10px;
+}
+
+.todo{
+    background-color: #7FBCD2;
+    Min-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.inprogress{
+    background-color: #7FBCD2;
+    Min-height: 400px;
+    border-radius: 10px;
+    border: 10px solid #969696;
+}
+
+.done{
+    background-color: #7FBCD2;
+    Min-height: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.draggable{
+    padding: 0.5rem;
+    background-color: #E38B29;
+    color: white;
+    cursor: move;
 }
