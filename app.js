@@ -48,8 +48,10 @@ app.get("/", function (req, res) {
     var today = new Date();
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     Plan.find({ "timepoint": "daily" }, function (err, foundItem) {
-        res.render("home", { day: today.toLocaleDateString("en-US", options), foundItem: foundItem });
-    })
+        Plan.find({ "timepoint": "weekly" }, function (err, foundWeeklyItem) {
+        res.render("home", { day: today.toLocaleDateString("en-US", options), foundItem: foundItem, foundWeeklyItem: foundWeeklyItem })
+    }).limit(5)
+    }).limit(5);
 })
 
 app.post("/add", function (req, res) {
@@ -58,6 +60,18 @@ app.post("/add", function (req, res) {
         user: userName,
         plan: itemName,
         timepoint: "daily",
+        priority: 2
+    });
+    newplan.save();
+    res.redirect("/")
+})
+
+app.post("/weeklyadd", function (req, res) {
+    const itemName = req.body.weeklyplan;
+    const newplan = new Plan({
+        user: userName,
+        plan: itemName,
+        timepoint: "weekly",
         priority: 2
     });
     newplan.save();

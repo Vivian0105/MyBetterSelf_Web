@@ -1,0 +1,63 @@
+Part 1. Node.js
+
+1. Download Node.js from the website (choose the LTS version) and install it. 
+https://nodejs.org/en/
+
+
+Part 2. npm (Node Package Manager)
+npm is bundled with node. After installing Node.js, you already have npm installed. 
+
+
+Part 3. Create a real localhost server with express. 
+1. create a project directory. 
+2. under the project directory, create a new file named "xx.js". 
+2. run "npm init" to initiate the project. 
+3. install the packages needed. eg. npm -i express, body-parser, mongoose. 
+4. in xx.js file, require the packages needed. 
+
+    eg. const express = require("express");
+        const app = express();
+
+Part 4. Nodemon(a npm package that makes it easy to auto restart our server after we change the .js file. )
+1. install it. 
+sudo npm install -g nodemon
+2. start a server 
+nodemon xx.js
+
+
+Part 5. MongoDB
+1. download MongoDB community Server. (https://www.mongodb.com/try/download/community) (package choose MSI)
+2. install MongoDB
+3. create folder under C drive C:/data/db
+4. Under home direcotory of the terminal, create a new file .bash_profile
+5. open .bash_profile
+6. write in 
+   alias mongod="/c/Program\ files/MongoDB/Server/5.0/bin/mongod.exe"
+   alias mongo="/c/Program\ Files/MongoDB/Server/5.0/bin/mongo.exe"
+7. type "mongod" in terminal to open the MongoDB server
+8. open another terminal
+9. type "mongo" to enter a mongo shell 
+
+
+Part 6. Mongoose (mongodb object modeling for node.js)
+1. install
+npm -i mongoose
+2. in xx.js, require it and use it. 
+const mongoose = requrie('mongoose')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

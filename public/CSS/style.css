@@ -16,6 +16,10 @@ button {
     border-width: 0;
   }
 
+.orangebutton{
+    background-color: #E38B29;
+}
+
 .top-container{
     background-image: url("../Imgs/climbing_rainbowcolor.jpg");
     padding: 20px 5px;
@@ -54,6 +58,7 @@ button {
     height: 18rem;
     border-radius: 25px;
     padding:2px;
+    position: relative;
 }
 
 .monthly{
@@ -61,6 +66,7 @@ button {
     background-color: #7FBCD2;
     height: 15rem;
     border-radius: 25px;
+    position: relative;
 }
 
 .box {

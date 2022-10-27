@@ -53,6 +53,22 @@
             </div>
             <div class="col-6 weekly">
                 <h4>Weekly Plan</h4>
+
+                <div class="box">
+                    <% foundWeeklyItem.forEach(function(item){ %>
+                        <form action="/delete" method="post">
+                            <div class="item">
+                                <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+                                <p><%=item.plan%></p>
+                            </div>
+                        </form>
+                    <% }) %>                   
+                    <form class='item' action="/weeklyadd" method="post">
+                        <input type="text" name="weeklyplan" placeholder="New Weekly Plan" autocomplete="off">
+                        <button type="submit" class="orangebutton">+</button>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-info btn-sm fixbutton orangebutton">Show More</button>
             </div>
         </div>
     </div> 
