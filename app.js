@@ -50,17 +50,16 @@ app.get("/", function (req, res) {
     Plan.find({ "timepoint": "daily" }, function (err, foundItem) {
         Plan.find({ "timepoint": "weekly" }, function (err, foundWeeklyItem) {
         res.render("home", { day: today.toLocaleDateString("en-US", options), foundItem: foundItem, foundWeeklyItem: foundWeeklyItem })
-    }).limit(5)
+    }).sort([['priority', -1]]).limit(5)
     }).limit(5);
 })
 
 app.get("/weekly", function (req, res) {
     var today = new Date();
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    Plan.find({ "timepoint": "weekly" }, function (err, foundItem) {
-        res.render("weekly", { day: today.toLocaleDateString("en-US", options), foundItem: foundItem, foundWeeklyItem: foundItem })
-    });
+    Plan.find({"timepoint": "weekly"}).sort([['priority', -1]]).exec(function(err, foundWeeklyItem) { res.render("weekly", { day: today.toLocaleDateString("en-US", options), foundWeeklyItem: foundWeeklyItem }) });
 })
+
 app.post("/add", function (req, res) {
     const itemName = req.body.todo;
     const newplan = new Plan({
@@ -76,7 +75,7 @@ app.post("/add", function (req, res) {
 app.post("/weeklyadd", function (req, res) {
     console.log(req)
     if (req.body.Priority=='Priority'){
-        var weeklypriority = 1;
+        var weeklypriority = 0;     // low: 0, medium: 1, high: 2
     } else{
         var weeklypriority = req.body.Priority;
     }

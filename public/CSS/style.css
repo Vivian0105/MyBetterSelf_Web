@@ -86,7 +86,8 @@ button {
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 30px;
+    vertical-align: middle;
 }
 
 input[type="text"] {
